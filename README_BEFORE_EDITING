@@ -1,0 +1,55 @@
+Na spilce kdyz vlezes do adresare /var/www2,
+tak edituje akorat templaty v adresare "templates" a pak pust
+"./generate" a ono je to vezme a udela z toho .html soubory.
+
+Kdyz se podivas treba, jak vypada templates/hermes.html:
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+hp-FEM: Hermes project
+{% endblock %}
+
+{% block content %}
+        <h1 class="heading">Hermes project</h1>
+                <p><strong>Hermes</strong> is a free C++/Python
+library of adaptive hp-FEM algorithms.
+                The following links will lead you to the 1D, 2D and 3D
+versions of the library:
+                <ul>
+                        <li><a href="#">Hermes1D</a> (not available yet)</li>
+                        <li><a
+href="http://hpfem.math.unr.edu/projects/hermes2d">Hermes2D</a></li>
+                        <li><a
+href="http://hpfem.math.unr.edu/bugs/projects/show/hermes3d">Hermes3D</a></li>
+                </ul>
+{% endblock %}
+
+
+Tak vidis, ze to vezme layout.html (coz je cely to html, ktery jsi tam
+mel predtim) a jenom v tom zmeni title a content.  Takze obsah
+editujes uz jen na jednom miste v templates/layout.html, pak pust
+"./generate" a ono to updatuje vsechny stranky.
+
+Kdyz budes chtit pridat nejakou novou stranku, tak proste udelej novej
+template a pridej jeho nazev do ./generate:
+
+#! /usr/bin/env python
+
+from jinja2 import Environment, FileSystemLoader
+env = Environment(loader=FileSystemLoader('templates'))
+
+templates = ["hermes.html", "contact.html", "femcodes.html", "index.html"]
+
+for template in templates:
+    t = env.get_template(template)
+    open(template, "w").write(t.render())
+
+
+Pridas ho do toho listu "templates".  Neztak se zeptej, kdybys neco
+potreboval. Neni v tom zadna magie, vysledek jsou proste obycejny html
+soubory jako driv.
+
+
+
