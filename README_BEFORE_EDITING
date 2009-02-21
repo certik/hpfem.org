@@ -1,9 +1,11 @@
-Na spilce kdyz vlezes do adresare /var/www2,
-tak edituje akorat templaty v adresare "templates" a pak pust
-"./generate" a ono je to vezme a udela z toho .html soubory.
+How to edit the pages
+---------------------
 
-Kdyz se podivas treba, jak vypada templates/hermes.html:
+Please edit only the templates in the directory "templates", and then just run
+"./generate" from the root directory and it will take the templates and
+generate the .html files.
 
+For example, if you look into templates/hermes.html:
 
 {% extends "layout.html" %}
 
@@ -27,13 +29,13 @@ href="http://hpfem.math.unr.edu/bugs/projects/show/hermes3d">Hermes3D</a></li>
 {% endblock %}
 
 
-Tak vidis, ze to vezme layout.html (coz je cely to html, ktery jsi tam
-mel predtim) a jenom v tom zmeni title a content.  Takze obsah
-editujes uz jen na jednom miste v templates/layout.html, pak pust
-"./generate" a ono to updatuje vsechny stranky.
+Then you can see, that it takes layout.html (which is the whole html that you
+can download from freetemplates.org) a and it only changes the title and the
+content.  So the contens is now only edited at one place in
+templates/layout.html, then you run "./generate" and it will updated all pages.
 
-Kdyz budes chtit pridat nejakou novou stranku, tak proste udelej novej
-template a pridej jeho nazev do ./generate:
+When you want to add/delete a new page, then just create/delete a template and
+add/delete it's name from ./generate:
 
 #! /usr/bin/env python
 
@@ -47,9 +49,4 @@ for template in templates:
     open(template, "w").write(t.render())
 
 
-Pridas ho do toho listu "templates".  Neztak se zeptej, kdybys neco
-potreboval. Neni v tom zadna magie, vysledek jsou proste obycejny html
-soubory jako driv.
-
-
-
+Add/delete it from the list "templates".
