@@ -1,17 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
-		<h1 class="heading">hp-FEM</h1>
-		<p>The <strong>hp-FEM</strong> is a modern version of the Finite Element Method (FEM). It combines 
-                adaptively finite elements of variable size (h) and polynomial degree (p) to attain extremely fast, 
-                <em>exponential</em> convergence. This makes is vastly superior to standard low-order FEM methods 
-                which nowadays are abundant in both the academic and commercial software packages. The hp-FEM is more 
-                demanding than standard FEM from both the mathematical and programming point of view. Therefore,
-                hp-FEM codes are rather scarce.  </p>
 
-		<p><strong>Our mission</strong> is to disseminate the hp-FEM broadly and to create an open-source
-                environment that eventually will become an alternative to old commercial FEM codes. </p>
+                <h1 class="heading">The Hermes project</h1>
+                <p><strong>Hermes</strong> is a free C++/Python library for rapid prototyping of adaptive FEM and hp-FEM solvers
+                available under the <a href="http://www.gnu.org/licenses/gpl-2.0.txt">GPL license</a> (Version 2, 1991).
+                The library has a clean design and modular structure. There are several <a href="uniquefeatures.html" title="">unique features</a> that
+                make Hermes different from other FEM and hp-FEM codes. 
+                <p>
 
-		<p><strong>Visit</strong> <a href="http://en.wikipedia.org/wiki/Hp-FEM">Wikipedia hp-FEM page</a>.
+                <b>Home pages</b> of the 1D, 2D and 3D versions of Hermes:
+                <ul>
+                        <li><a href="#">Hermes1D</a> </li>
+                        <li><a href="http://hpfem.math.unr.edu/projects/hermes2d">Hermes2D</a></li>
+                        <li><a href="http://hpfem.math.unr.edu/bugs/projects/show/hermes3d">Hermes3D</a></li>
+                </ul>
+
+                <b>Hermes over the web</b>: Do not install Hermes, compute <a href="http://nb.hpfem.org:8000/">remotely on our computers!</a><br><br>
+
+<p>
+
+<b>Some scientific articles</b> about Hermes can be found <a href="articles.html" title="">here</a>.
+
+
 
 {% endblock %}

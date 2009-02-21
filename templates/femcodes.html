@@ -1,13 +1,30 @@
 {% extends "layout.html" %}
 
 {% block title %}
-hp-FEM: Other FEM codes
+hpFEM.org: Other FEM codes
 {% endblock %}
 
 {% block content %}
 		<h1 class="heading">Other FEM codes</h1>
-                <p>We list all opensource (<a href="http://www.opensource.org/">OSI</a> approved license) FEM codes that we know of:
 
+                <b>hp-FEM codes</b>: Besides Hermes, there are very few hp-FEM codes we are aware 
+of:
+<p>
+                <ul>
+                        <li><a href="http://www.concepts.math.ethz.ch/">Concepts
+</a> (developed by Ph.D. students at SAM, ETH Zurich)</li>
+                        <li><a href="http://users.ices.utexas.edu/~leszek/hp-ins
+tructions.html">1Dhp90, 2Dhp90, 3Dhp90</a> (developed by L. Demkowicz at UT Aust
+in)</li>
+                </ul> 
+If you know of any other opensource adaptive hp-FEM code that should be here, 
+please let us know!<br><br>
+
+<p>
+
+                <b>Standard FEM codes</b>: There are numerous (standard low-order) FEM codes available on 
+the web. We only list some of them:
+<p>
                 <ul>
                         <li><a href="http://libmesh.sf.net/">libMesh</a></li>
                         <li><a href="http://sfepy.org/">SfePy</a></li>
@@ -15,5 +32,22 @@ hp-FEM: Other FEM codes
                         <li><a href="http://fenics.org/">FEniCS Project</a></li>
                         <li><a href="http://oofem.org/">OOFEM</a></li>
                 </ul> 
-If you know of any other opensource code that is not listed here, please let us know.
+
+If you know of any other opensource FEM code that should be here, 
+please let us know!<br><br>
+
+<p>
+
+                <b>Miscellaneous internet FEM resources</b>:
+<p>
+                <ul>
+                        <li><a href="http://homepage.usask.ca/~ijm451/finite/fe_resources/">Internet Finite Element Resource (IFER) </a>  -- conferences and courses, newsgroups, homepages, 
+tutorials, libraries, mesh generation and visualization tools, books, etc.</li>
+                        <li><a href="http://en.wikipedia.org/wiki/List_of_finite_element_software_packages">Wikipedia list of FEM packages</a>  </li>
+                        <li><a href="http://www-math.cudenver.edu/~lfranca/links/fem_people.html">Finite Element People</a>  </li>
+
+                </ul>
+If you know of any other quality sites worth including here, please let us know too!
+
+
 {% endblock %}

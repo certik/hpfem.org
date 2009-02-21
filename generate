@@ -3,7 +3,7 @@
 from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader('templates'))
 
-templates = ["hermes.html", "hermesoverweb.html", "contact.html", "femcodes.html", "hpfemcodes.html", "femresources.html", "discussion.html", "index.html"]
+templates = ["hpfem.html", "uniquefeatures.html", "articles.html", "femcodes.html", "discussion.html", "index.html"]
 
 for template in templates:
     t = env.get_template(template)
