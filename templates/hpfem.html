@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+hpFEM.org: What is hp-FEM?
+{% endblock %}
+
+{% block content %}
+                <h1 class="heading">What is hp-FEM?</h1>
+                <p>The <strong>hp-FEM</strong> is a modern version of the Finite Element Method (FEM). It combines
+                adaptively finite elements of variable size (h) and polynomial degree (p) to attain extremely fast,
+                <em>exponential</em> convergence. This makes is vastly superior to standard low-order FEM methods
+                which nowadays are abundant in both the academic and commercial software packages. The hp-FEM is more
+                demanding than standard FEM from both the mathematical and programming point of view. Therefore,
+                hp-FEM codes are rather scarce.  </p>
+<p>
+<b>Example</b>:
+The following graph corresponding to the <a href="http://en.wikipedia.org/wiki/Hp-FEM">Fichera corner problem</a>
+is a representative example of the huge difference in convergence
+rates of
+adaptive low-order FEM (with linear and quadratic elements) and the
+hp-FEM. The horizontal and vertical axes show the number of degrees
+of freedom (unknowns in the discrete problem) and the error in
+logarithmic scale, respectively.
+
+<center>
+<img src="/images/conv-new2.png" width=500px/>
+</center>
+
+<p>
+                <p><strong>Our mission</strong> is to disseminate the hp-FEM broadly and to create an open-source
+                environment that eventually will become an alternative to old commercial FEM codes. </p>
+
+                <p><strong>Visit</strong> <a href="http://en.wikipedia.org/wiki/Hp-FEM">Wikipedia hp-FEM page</a>.
+
+
+
+{% endblock %}
