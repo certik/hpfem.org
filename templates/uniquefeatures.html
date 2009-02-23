@@ -14,7 +14,7 @@ hpFEM.org: Unique features of Hermes
                 from other FEM and hp-FEM codes. 
 <p>
                 <ul>
-                <li><b>PDE-independent adaptivity algorithms</b>: Nowadays it is no longer
+                <li><font color=purple><b>PDE-independent adaptivity algorithms</font></b>: Nowadays it is no longer
                 possible to solve PDE without error control, i.e., without automatic adaptivity.
                 Hermes is able to guide 
                 automatic adaptivity without using any PDE-specific information
@@ -25,14 +25,14 @@ hpFEM.org: Unique features of Hermes
                 problems, arbitrary combinations of multiphysics coupled problems, and even to image 
                 compression. </li>
 <p>
-                <li><b>Arbitrary-level hanging nodes</b>: 
+                <li><font color=purple><b>Arbitrary-level hanging nodes</b></font>: 
 Hermes features our novel algorithm for arbitrary-level hanging nodes. This means that elements of very different sizes can be adjacent to each other in the mesh. This has two huge advantages:
 <ul>
 <li> Small-scale phenomena can be resolved extremely efficiently since no regularity-enforced (unwanted) refinements are present.</li>
 <li> Automatic adaptivity is simplified drastically, since all element refinements are completely local (splitting of an element does not affect the surrounding elements as in standard adaptivity algorithms). 
 </li>
 </ul>
-                <li><b>Multiple Types of Higher-Order Finite Elements Combined in One Computation</b>: 
+                <li><font color=purple><b>Multiple Types of Higher-Order Finite Elements in One Computation</b></font>: 
 In multi-physics coupled problems, various solution components live 
 in generally different spaces of functions. Therefore, various solution components can be discretized 
 using generally different types of finite elements. Currently, Hermes provides the following types of 
@@ -58,20 +58,20 @@ Discontinuous L2 elements that can be used, for example, for pressure in incompr
 Thus Hermes is able to approximate different physical fields using geometrically and polynomially different meshes consisting of different element types. This is done in a monolithic way (i.e., there is one global stiffness matrix for the discrete problem). 
 <p>
 
-                <li><b>Adaptive multimesh hp-FEM</b>: 
+                <li><font color=purple><b>Adaptive multimesh hp-FEM</b></font>: 
 In multi-physics coupled problems, eigenproblems, and other applications various solution 
 exhibit dramatical qualitative as well as quantitative differences. For example, boundary layers which are characteristic for viscous flow are not present in electromagnetics, heat transfer, or elasticity. Conversely, electromagnetic field often contains singularities at sharp corners or edges, which do not appear in other physical fields. Standard methods that use the same mesh for all physical fields are thus inefficient. Hermes allows each solution component to be solved on an individual higher-order finite element mesh equipped with an independent automatic hp-adaptivity algorithm. This is done in a monolithic way (without operator splitting) using our novel multi-mesh hp-FEM technique.
                 This has a huge positive impact on the efficiency and accuracy of multiphysics,
                 eigenvalue, and other computations involving multiple solution components. </li>
 <p>
-                <li><b>Space-time adaptive hp-FEM on dynamical meshes</b>: 
+                <li><font color=purple><b>Space-time adaptive hp-FEM on dynamical meshes</b></font>: 
 Hermes is the first code to provide automatic hp-adaptivity for nonstationary PDE problems on dynamical meshes that are refined and coarsened simultaneously as dictated by the space and time approximation error. The algorithm, which is a combination of the classical Rothe's method and our novel multi-mesh hp-FEM, is extremely robust and works in the same way for all nonstationary PDE problems. Our novel technique
                 is based on a combination of the multimesh hp-FEM with the classical Rothe's method.
                 See sample <a href="http://hpfem.math.unr.edu/gallery/">computational videos</a> for
                 illustration.</li>
 <p>
 
-                <li><b>Other features</b>: 
+                <li><font color=purple><b>Other features</b></font>: 
 <ul>
 <li>
 general unstructured triangular and quadrilateral meshes,
