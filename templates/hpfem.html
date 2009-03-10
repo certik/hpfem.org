@@ -6,12 +6,31 @@ hpFEM.org: What is hp-FEM?
 
 {% block content %}
                 <h1 class="heading">What is hp-FEM?</h1>
-                <font color=purple><b>hp-FEM</b></font> is a modern version of the Finite Element Method (FEM). It combines
-                adaptively finite elements of variable size (h) and polynomial degree (p) to attain extremely fast,
-                <em>exponential</em> convergence. This makes is vastly superior to standard low-order FEM methods
-                which nowadays are abundant in both the academic and commercial software packages. The hp-FEM is more
-                demanding than standard FEM from both the mathematical and programming point of view. Therefore,
-                hp-FEM codes are rather scarce.  </p>
+                <font color=purple><b>hp-FEM</b></font> is a modern 
+version of the Finite Element Method (FEM), which combines
+adaptively finite elements of variable size (h) and polynomial 
+degree (p). With a good adaptivity algorithm, the hp-FEM 
+attains extremely fast (exponential) convergence rates.
+Sample hp-FEM mesh is shown in the following image which 
+corresponds to a flame propagation problem (enlarge using 
+right click + view image). 
+
+<p>
+
+<center>
+<img src="images/flame.jpg" width=500px/>
+</center>
+<br>
+
+<p>
+
+
+
+The hp-FEM takes minutes where standard FEM takes hours or days. 
+However, adaptive hp-FEM codes are rather scarce since the hp-FEM
+is more demanding than standard FEM from both the mathematical 
+and programming point of view. </p>
+
 <p>
 <font color=purple><b>Example</b></font>:
 The following graph corresponding to the <a href="http://en.wikipedia.org/wiki/Hp-FEM">Fichera corner problem</a>
