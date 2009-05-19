@@ -11,7 +11,8 @@ How to edit the pages
 
 Please edit only the templates in the directory "templates", and then just run
 "./generate" from the root directory and it will take the templates and
-generate the .html files.
+generate the .html files. The "./generate" script depends on the jinja2 library
+(on Debian/Ubuntu, install the "python-jinja2" package).
 
 For example, if you look into templates/hermes.html:
 
